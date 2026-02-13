@@ -1,9 +1,18 @@
 <!DOCTYPE html>
   <html lang="PT-BR">
       <head>
-
+          <title>FrontEnd</title>
+          <meta charset="utf-8">
+          <link rel="stylesheet" type="text/css" href="">
+          <script></script>
       </head>
-      <body>
+      <style>
+          .body{
+            background-color: blue;
+            color: rgb(20, 199, 175);
+          }
+      </style>
+      <body class="body">
           Bom dia, esse é o primeiro codigo de html
         <form method="POST" action="index.php">
             <fieldset>
@@ -11,9 +20,9 @@
                   Primeiro Formulario
                 </legend>
                 <br>
-                Usuario: <input type="text" placeholder="Usuario" minlength="5" maxlength="10" required><br>
-                Senha:   <input type="password" placeholder="Senha" minlength="5" maxlength="10" required><br>
-                <input type="submit" value="Registrar">
+                <p>Usuario=<input type="text" placeholder="Usuario" minlength="5" maxlength="10" required><br>
+                <p>senha</p><input type="password" placeholder="Senha" minlength="5" maxlength="10" required><br>
+                <input type="submit" value="Registrar" class="submit">
             </fieldset>
         </form>
       </body>
