@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html lang="PT-BR">
+      <head>
+          <title>FrontEnd</title>
+          <meta charset="utf-8">
+          <link rel="stylesheet" type="text/css" href="">
+          <script></script>
+      </head>
+      <style>
+          .body{
+            background-color: rgb(12, 12, 11);
+            color:rgba(74, 87, 74, 0.678);
+          }
+          .texto{
+            color:rgba(133, 19, 19, 0.801);
+          }
+          .submit{
+            background-color: rgb(32, 150, 32);
+          }
+          .foto{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCXZG4-PsC6_cLI-_mOix_ZJ5AYOzaI5XwWw&s");
+            width:500px;
+            height:500px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+          }
+      </style>
+      <body class="body">
+          Bom dia, esse é o primeiro codigo de html
+        <form method="POST" action="index.php">
+            <fieldset>
+                <legend>
+                  login
+                </legend>
+                <br>
+                <p class="texto">Usuario:</p> <input type="text" placeholder="Usuario" minlength="5" maxlength="10" required><br>
+                <p class="texto">Senha:</p>   <input type="password" placeholder="Senha" minlength="5" maxlength="10" required><br>
+                <input type="submit" value="Registrar" class="submit">
+            </fieldset>
+            <fieldset>
+              <legend>
+                cadastro
+              </legend>
+              nome<input type="text"><br>
+              sobrenome<input type="text"><br>
+              data de nascimento<input type="date"><br>
+              m<input type="checkbox"><br>
+              f <input type="checkbox"><br>
+
+
+
+
+
+
+            </fieldset>
+        </form> 
+      </body>
+  </html>
