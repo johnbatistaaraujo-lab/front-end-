@@ -1,34 +1,130 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Portfólio</title>
+    <style>
+        /* Estilização Geral */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Menu de Navegação */
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            display: none; /* Esconde todas as seções por padrão */
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: block; /* Mostra apenas a seção ativa */
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 250px;
+        }
+    </style>
 </head>
 <body>
-    <style>
-       h1{
-        background-color: brown;
-        
-        color: rgb(204, 139, 42);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 17px;
-    } 
-    h2{
-        color: rgb(165, 84, 8);
-        font-size:15px ;
-    }
-    h3{
-        color: rgb(165, 84, 8);
-        font-size: 15px;
-    }
-    
-    </style>
-    <header>
-        <h1>SOBRE MIM</h1>
-        <h2>meu nome: john eudardo </h2>
-        <h3>minha biografia: tenho 16 anos, gosto de musica e plantas</h3>
-    </header>
+
+    <nav>
+        <a onclick="showSection('home')">Início</a>
+        <a onclick="showSection('trabalhos')">Portfólio</a>
+        <a onclick="showSection('sobre')">Sobre Mim</a>
+        <a onclick="showSection('contato')">Contato</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h1>Bem-vindo ao meu Portfólio, o portfólio 3.</h1>
+        <p>Meu nome é Gustavo Borges. Sou um desenvolvedor apaixonado por criar soluções digitais e criativas, estudando Back-End e Front-End.</p>
+        <p>Ali em cima, você pode ver meu PORTFÓLIO, SOBRE e CONTATO.</p>
+        <P>Também tem os links dos meus projetos como a barbearia e o site assustador.</P>
+    </section>
+
+    <section id="trabalhos">
+        <h1>Meus websites feitos com HTML.</h1>
+        <div class="card-container">
+            <div class="card"><h3>Site Assustador</h3><p>Site com temática assustadora feita usando HTML.</p><a href="https://birgesdev.github.io/Assustador/assustador.html">Link do site.</a></div>
+            <div class="card"><h3>Calculadora</h3><p>Calculadora (quase) funcional feita com HTML.</p> <a href="https://birgesdev.github.io/Assustador/calculadora.html">Link do site.</a></div>
+            <div class="card"><h3>Borges Barbearia</h3><p>Site com temática de barberia feita usando HTML.</p> <a href="https://birgesdev.github.io/Assustador/DASDA/BARBEIROOOO.html">Link do site.</a></div> 
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h1>Sobre Mim</h1>
+        <p>Meus hobbies são andar de bike, desenhar, jogar e tenho interesse em programação e desenvolvimento de jogos. Por que?
+        É por que eu acho jogos legais. E programar pode ser difícil, mas nada pode destruir o orgulho de ver algo escrito rodar e funcionar.</p>
+    </section>
+
+    <section id="contato">
+        <h1>Contato</h1>
+        <p>E-mail: borges.gustavo04@escola.pr.gov.br</p>
+        <p>Github: <a href="https://github.com/BirgesDEV">https://github.com/BirgesDEV</a></p>
+    </section>
+
+    <script>
+        function showSection(id) {
+            // Remove a classe 'active' de todas as seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Adiciona a classe 'active' apenas na seção clicada
+            document.getElementById(id).classList.add('active');
+            
+            // Rola para o topo da página ao trocar
+            window.scrollTo(0, 0);
+        }
+    </script>
+<p> <strong>17/04/2026, Gustavo Borges, Portfólio Três © todos os direitos reservados.</strong></p>
 </body>
 </html>
+
